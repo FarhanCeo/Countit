@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTIT</title>
+    <style type="text/css"> 
+        button{
+            width: 10vw;
+            height: 10%;
+            color:rgb(255, 0, 0)
+            border:2px double #5900ff;
+            border-radius: 25px;
+            cursor: pointer;
+
+        }
+        #screen{
+            width: 50vw;
+            height: 20vw;
+            color:#5900ff;
+            border:2px double red
+            border-radius: 25px;
+            margin:0% 0% 0% 25%;
+            text-align: center;
+            
+            cursor: not-allowed;
+        }
+        #buttons{
+            width: 50vw;
+            margin:4% 0% 0% 25%;
+        }
+    </style>
+</head>
+<body>
+    <div id="block" style="margin: 0% 0% 0% 0%;border: ;width:100vw;height: 100vh;border-radius: 25px;background-image: url('count.jpg'); background-size: 100% 100%;">
+   <h1 style="font-family: cursive;text-align: center;font-size: 5vw;">Count it</h1>
+   <div class="count out" style="">
+    <input type="number" id="screen" value="0" style="font-size: 8vw; border-radius: 25px; border-color: red; border:4px ;"></input><br>
+    <div id="buttons">
+    <button onclick="countByOne()" style="font-size: 3vw; color: red;">Count</button>
+    <button onclick="reset()" style="font-size: 3vw; float: right;  color: red;" >Reset</button>   
+    </div>
+    </div>
+    
+    
+<script>
+    function countByOne(){
+        bleep.play();
+        let x = parseInt(document.getElementById('screen').value);
+        document.getElementById('screen').value =eval(x + 1); 
+        
+    }
+    function reset(){
+        bleep.play();
+        document.getElementById('screen').value = 0;
+    }
+   var bleep = new Audio();
+   bleep.src = "click.mp3";
+       
+</script>
+  
+</body>
+</html>
